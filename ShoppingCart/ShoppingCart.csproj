@@ -170,16 +170,33 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611280811477_AddProductTable.cs" />
+    <Compile Include="Migrations\201611280811477_AddProductTable.Designer.cs">
+      <DependentUpon>201611280811477_AddProductTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611280843250_AddManufacturerTable.cs" />
+    <Compile Include="Migrations\201611280843250_AddManufacturerTable.Designer.cs">
+      <DependentUpon>201611280843250_AddManufacturerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611280849065_PopulateManufacturer.cs" />
+    <Compile Include="Migrations\201611280849065_PopulateManufacturer.Designer.cs">
+      <DependentUpon>201611280849065_PopulateManufacturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Manufacturer.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-flatly.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -234,6 +251,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,6 +265,17 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611280811477_AddProductTable.resx">
+      <DependentUpon>201611280811477_AddProductTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611280843250_AddManufacturerTable.resx">
+      <DependentUpon>201611280843250_AddManufacturerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611280849065_PopulateManufacturer.resx">
+      <DependentUpon>201611280849065_PopulateManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

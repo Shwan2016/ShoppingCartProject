@@ -1,0 +1,39 @@
+﻿@model ShoppingCart.Models.Product
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Product Details</h2>
+
+
+<div class="row">
+    <div class="col-md-8"> 
+        <table class="table table-bordered table-hover">
+
+            <thead>
+                <tr>
+                    <th>Products</th>
+                    <th>Price</th>
+                    <th>Number In Stock</th>
+                    <th>Manufacturer</th>
+                    <th>Manufacturer Phone Number</th>
+
+                </tr>
+            </thead>
+            <tbody>
+          
+                
+                    <tr>
+                        <td>@Model.Name</td>
+                        <td>@Model.Price</td>
+                        <td>@Model.NumberInStock</td>
+                        <td>@Model.Manufacturer.Name</td>
+                        <td>@Model.Manufacturer.PhoneNumber</td>
+                    </tr>
+                
+            </tbody>
+
+        </table>
+    </div>
+</div>
